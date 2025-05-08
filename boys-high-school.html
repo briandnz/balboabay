@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boys High School Tryouts | Balboa Bay</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      height: 100%;
+      background: black;
+      color: white;
+      overflow: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: rgba(0, 31, 63, 0.9);
+      backdrop-filter: blur(20px);
+    }
+
+    nav {
+      padding: 1.5em 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .logo-menu {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .logo {
+      width: 90px;
+      height: auto;
+      transition: 0.4s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.2);
+    }
+
+    .menu, .clinics, .calendar, .tryouts {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      color: white;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5em;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a,
+    .menu a {
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover,
+    .menu a:hover {
+      color: #0074D9;
+    }
+
+    nav ul li ul.dropdown {
+      display: none;
+      position: absolute;
+      background-color: #001f4d;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      border-radius: 4px;
+      z-index: 150;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    nav ul li.tryouts ul.dropdown {
+      left: auto;
+      right: 0;
+    }
+
+    nav ul li:hover ul.dropdown {
+      display: block;
+    }
+
+    nav ul li ul.dropdown li {
+      display: block;
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul li ul.dropdown li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    nav ul li ul.dropdown li a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(60%);
+    }
+
+    .tryout-container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      padding-top: 160px;
+    }
+
+    .tryout-container h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .tryout-container p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .register-button {
+      padding: 12px 28px;
+      font-size: 1rem;
+      border: 2px solid #0074D9;
+      color: white;
+      background-color: transparent;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .register-button:hover {
+      background-color: #0074D9;
+    }
+
+    @media (max-width: 768px) {
+      .tryout-container h1 {
+        font-size: 2.2rem;
+      }
+
+      .tryout-container p {
+        font-size: 1rem;
+      }
+
+      nav {
+        padding: 1em;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+      }
+
+      .logo {
+        width: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="menu">
+        <i class="bx bx-menu"></i>
+        <a href="#">Menu</a>
+      </div>
+      <div class="logo-menu">
+        <a href="index.html">
+          <img src="images/logo2.png" class="logo" alt="Balboa Bay Logo" />
+        </a>
+      </div>
+      <ul>
+        <li class="clinics">
+          <i class="bx bx-calendar-event"></i>
+          <a href="#">Clinics</a>
+          <ul class="dropdown">
+            <li><a href="summer-clinics.html">Summer Clinics</a></li>
+            <li><a href="youth-clinics.html">Youth Clinics</a></li>
+          </ul>
+        </li>
+        <li class="calendar">
+          <i class="bx bx-calendar"></i>
+          <a href="calendar.html">Calendar</a>
+        </li>
+        <li class="tryouts">
+          <i class="bx bx-run"></i>
+          <a href="#">Tryouts</a>
+          <ul class="dropdown">
+            <li><a href="girls-jr-high.html">Girls Jr. High</a></li>
+            <li><a href="boys-jr-high.html">Boys Jr. High</a></li>
+            <li><a href="girls-high-school.html">Girls High School</a></li>
+            <li><a href="boys-high-school.html">Boys High School</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline class="video-background">
+    <source src="images/boys-hs.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content -->
+  <div class="tryout-container">
+    <h1>Boys High School Tryouts</h1>
+    <p>
+      Join the most competitive volleyball environment in Southern California. Balboa Bay’s Boys High School Tryouts offer elite athletes the platform to rise, refine, and compete at the next level.
+    </p>
+    <a href="#" class="register-button">Register Now</a>
+  </div>
+</body>
+</html>

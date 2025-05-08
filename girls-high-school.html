@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Girls High School Tryouts | Balboa Bay</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: rgba(0, 31, 63, 0.9);
+      backdrop-filter: blur(20px);
+    }
+
+    nav {
+      padding: 1.5em 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .logo-menu {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .logo {
+      width: 90px;
+      height: auto;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5em;
+      list-style: none;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav ul li ul.dropdown {
+      display: none;
+      position: absolute;
+      background-color: #001f4d;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      border-radius: 4px;
+      z-index: 150;
+    }
+
+    nav ul li:hover ul.dropdown {
+      display: block;
+    }
+
+    nav ul li ul.dropdown li {
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul li ul.dropdown li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(60%);
+    }
+
+    .hero-content {
+      z-index: 2;
+      padding: 0 2rem;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content a.button {
+      display: inline-block;
+      padding: 10px 24px;
+      border: 2px solid #0074D9;
+      color: white;
+      background: transparent;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .hero-content a.button:hover {
+      background: #0074D9;
+      color: white;
+    }
+
+    main {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: auto;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #000;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="menu">
+        <i class="bx bx-menu"></i>
+        <a href="#">Menu</a>
+      </div>
+      <div class="logo-menu">
+        <a href="index.html">
+          <img src="images/logo2.png" class="logo" alt="Balboa Bay Logo" />
+        </a>
+      </div>
+      <ul>
+        <li class="clinics">
+          <i class="bx bx-calendar-event"></i>
+          <a href="#">Clinics</a>
+          <ul class="dropdown">
+            <li><a href="summer-clinics.html">Summer Clinics</a></li>
+            <li><a href="youth-clinics.html">Youth Clinics</a></li>
+          </ul>
+        </li>
+        <li class="calendar">
+          <i class="bx bx-calendar"></i>
+          <a href="calendar.html">Calendar</a>
+        </li>
+        <li class="tryouts">
+          <i class="bx bx-dumbbell"></i>
+          <a href="#">Tryouts</a>
+          <ul class="dropdown">
+            <li><a href="girls-jr-high.html">Girls Jr. High</a></li>
+            <li><a href="boys-jr-high.html">Boys Jr. High</a></li>
+            <li><a href="girls-high-school.html">Girls High School</a></li>
+            <li><a href="boys-high-school.html">Boys High School</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="images/placeholder-tryouts.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-content">
+      <h1>Girls Jr. High Tryouts</h1>
+      <p>Be part of something elite. Sign up and take your first step toward greatness.</p>
+      <a href="#" class="button">Sign Up Now</a>
+    </div>
+  </section>
+
+  <main>
+    <h2>What to Expect</h2>
+    <p>
+      Join us for our exclusive Girls High School Tryouts this summer. Balboa Bay’s legacy of excellence starts here. Expect competitive drills, expert evaluation, and a chance to prove you belong among the best.
+    </p>
+    <p><strong>Location:</strong> Orange Coast College Main Gym</p>
+    <p><strong>Dates:</strong> July 8, 10, 15</p>
+    <p><strong>Time:</strong> 4:00 PM - 6:00 PM</p>
+  </main>
+
+  <footer>
+    &copy; 2025 Balboa Bay Volleyball Club. All rights reserved.
+  </footer>
+</body>
+</html>

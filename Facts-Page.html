@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balboa Bay Facts</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 31, 63, 0.9);
+      z-index: 100;
+      backdrop-filter: blur(20px);
+    }
+
+    nav {
+      padding: 1.5em 2em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .logo-menu {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .logo {
+      width: 90px;
+      height: auto;
+      transition: 0.4s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.2);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5em;
+      list-style: none;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav ul li ul.dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #001f4d;
+      border-radius: 4px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    nav ul li:hover ul.dropdown {
+      display: block;
+    }
+
+    nav ul li ul.dropdown li {
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul li ul.dropdown li a {
+      color: white;
+    }
+
+    .section {
+      padding: 100px 20px 60px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #00bcd4;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0074D9;
+    }
+
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .logo-card {
+      background: #111;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      padding: 15px;
+    }
+
+    .logo-card:hover {
+      transform: scale(1.08);
+    }
+
+    .logo-card img {
+      max-width: 100%;
+      max-height: 80px;
+      object-fit: contain;
+    }
+
+    .infographic {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 20px;
+      background-color: #111;
+    }
+
+    .circle {
+      width: 180px;
+      height: 180px;
+      border: 4px solid #0074D9;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #fff;
+      position: relative;
+      animation: fadeInScale 1.2s ease forwards;
+      text-align: center;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    .circle .label {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      color: #aaa;
+      padding: 0 10px;
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.6);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .story {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 40px 20px;
+      background-color: #000;
+      color: #666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="menu"><a href="#">Menu</a></div>
+      <div class="logo-menu">
+        <a href="index.html"><img src="images/logo2.png" class="logo" alt="Balboa Bay Logo" /></a>
+      </div>
+      <ul>
+        <li class="clinics">
+          <a href="#">Clinics</a>
+          <ul class="dropdown">
+            <li><a href="summer-clinics.html">Summer Clinics</a></li>
+            <li><a href="youth-clinics.html">Youth Clinics</a></li>
+          </ul>
+        </li>
+        <li class="calendar"><a href="calendar.html">Calendar</a></li>
+        <li class="tryouts">
+          <a href="#">Tryouts</a>
+          <ul class="dropdown">
+            <li><a href="girls-jr-high.html">Girls Jr. High</a></li>
+            <li><a href="boys-jr-high.html">Boys Jr. High</a></li>
+            <li><a href="girls-high-school.html">Girls High School</a></li>
+            <li><a href="boys-high-school.html">Boys High School</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section" style="padding-top: 120px;">
+    <h1>Where Our Balboa Bay Alumni Play</h1>
+    <div class="logo-grid">
+      <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/en/a/a8/UC_Santa_Barbara_Gauchos_logo.svg" alt="UCSB" /></div>
+      <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/UC_Irvine_Anteaters_logo.svg" alt="UCI" /></div>
+      <div class="logo-card"><img src="https://sportslogohistory.com/wp-content/uploads/2023/09/uc_san_diego_tritons_2002-2018_a.png" alt="UCSD" /></div>
+      <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Hawaii_Warriors_logo.svg" alt="Hawaii" /></div>
+      <div class="logo-card"><img src="https://images.seeklogo.com/logo-png/30/2/long-beach-state-logo-png_seeklogo-306226.png" alt="LBSU" /></div>
+      <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/9/94/USC_Trojans_logo.svg" alt="USC" /></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h1>The Nation’s Top Volleyball Club</h1>
+  </section>
+
+  <section class="infographic">
+    <div class="circle">
+      <span class="value">46</span>
+      <span class="label">National Championships</span>
+    </div>
+    <div class="circle">
+      <span class="value">150+</span>
+      <span class="label">Total Medals</span>
+    </div>
+    <div class="circle">
+      <span class="value">250</span>
+      <span class="label">College Players</span>
+    </div>
+    <div class="circle">
+      <span class="value">1000+</span>
+      <span class="label">Club All-Americans</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Balboa Bay Coaches in the NCAA</h2>
+    <p class="story">
+      Many of our coaches are not only elite mentors — they’re embedded in the highest levels of the sport. From NCAA sidelines to national team collaborations, Balboa Bay's coaching DNA runs deep through collegiate volleyball.
+    </p>
+    <div class="logo-grid">
+      <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/en/4/4f/UCLA_Bruins_logo.svg" alt="UCLA" /></div>
+      <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Pepperdine_Waves_logo.svg" alt="Pepperdine" /></div>
+      <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Loyola_Chicago_Ramblers_logo.svg" alt="Loyola Chicago" /></div>
+      <div class="logo-card"><img src="https://upload.wikimedia.org/wikipedia/en/2/25/UC_San_Diego_Tritons_logo.svg" alt="UCSD" /></div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Balboa Bay Volleyball Club. All rights reserved.
+  </footer>
+
+</body>
+</html>
